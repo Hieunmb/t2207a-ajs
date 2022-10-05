@@ -7,12 +7,22 @@ import {StudentComponent} from "./classroom/student.component";
 import {TeacherComponent} from "./classroom/teacher.component";
 import {LoginComponent} from "./login/login.component";
 import {RegisterComponent} from "./login/register.component";
+import {RouterModule, Routes} from "@angular/router";
+import {ThoiTietComponent} from "./thoitiet/thoitiet.component";
+import {HttpClientModule} from "@angular/common/http";
+
+const appRoutes: Routes =[
+  {path:'login',component:LoginComponent},
+  {path:'register',component:RegisterComponent},
+  {path:'thoitiet',component:ThoiTietComponent},
+];
 @NgModule({
   declarations: [
-    AppComponent,ClassroomComponent,StudentComponent,TeacherComponent,LoginComponent,RegisterComponent
+    AppComponent,ClassroomComponent,StudentComponent,TeacherComponent,LoginComponent,RegisterComponent,ThoiTietComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,RouterModule.forRoot(appRoutes),
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
