@@ -1,7 +1,10 @@
-<br>
-<button (click)="burger()" class="btn btn-primary m-2">Burger</button>
-<button (click)="chicken()" class="btn btn-primary m-2">Chicken</button>
-<button (click)="rice()" class="btn btn-primary m-2">Rice</button>
-<button (click)="drinks()" class="btn btn-primary m-2">Drinks</button>
-<button (click)="dessert()" class="btn btn-primary m-2">Dessert</button><br>
-<img src="{{food}}"/>
+<h1>Menu {{flag}} </h1>
+<button type="button" class="btn btn-primary m-2" (click)="on()">Bật</button>
+<button type="button" class="btn btn-primary m-2" (click)="off()" >Tắt</button>
+<ul *ngIf="flag">
+  <li *ngFor="let m of menu;let i=index;">
+    <img src="{{menu[i].icon}}" width="50"/>
+    {{menu[i].name}}
+  </li>
+<!--  = for(int i=0;i<menu.length;i++)-->
+</ul>

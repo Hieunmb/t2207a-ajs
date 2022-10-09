@@ -1,0 +1,16 @@
+<ul>
+  <li *ngFor="let m of ls;let i=index;">
+    <div class="row m-2" style="float: left">
+      <div xmlns="http://www.w3.org/1999/html">
+          <div class="card mb-3 mt-1">
+            <div class="card-body" >
+              <h5 class="card-title">{{ls[i].dt_txt}}</h5>
+              <p>{{ls[i].main.temp}}<sup>o</sup>C</p>
+              <img src="http://openweathermap.org/img/wn/{{ls[i].weather[0].icon}}@2x.png" style="float: right" alt="..."/>
+              <p>{{ls[i].weather[0].description}}</p>
+            </div>
+          </div>
+    </div>
+    </div>
+  </li>
+</ul>
